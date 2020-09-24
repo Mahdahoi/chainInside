@@ -1,0 +1,60 @@
+<style>
+  html, body { margin: 0; }
+  #page {
+    width: 100vw;
+    height: 100vh;
+    background-color: blue;
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: 1fr auto 1fr;
+    grid-template-areas: ". . ." ". center ." ". . .";
+  }
+  .container {
+    grid-area: center;
+
+    height: 65vh;
+    width: 35vw;
+
+    position: relative;
+    overflow: hidden;
+
+    border: 3px solid red;
+  }
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    min-width: 100%;
+    min-height: 100%;
+  }
+</style>
+
+<div id="page">
+  <div class="container">
+    <img src="example.jpg">
+  </div>
+</div>
+
+<script src="../build/build.js"></script>
+<script>
+  const chainer = new ChainInside({
+    interval: undefined,
+    //interval: 200,
+
+    resize: true,
+    contours: false,
+    target: true,
+  });
+
+
+
+  chainer.register(
+    document.querySelector("img"),
+    835,
+    1030,
+    0.75,
+    0.75,
+  );
+</script>

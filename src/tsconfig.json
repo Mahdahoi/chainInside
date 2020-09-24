@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
+    "module": "amd",
+    "outFile": "../build/build.js",
+    "target": "ES2018",
+    "sourceMap": true,
+    "declaration": true,
+    "lib": [
+      "ES2020",
+      "DOM"
+    ],
+
+    "downlevelIteration": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
+  },
+  "include": [
+    "./**/*",
+    "./**/**/*"
+  ]
+}
